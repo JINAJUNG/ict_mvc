@@ -17,7 +17,7 @@ String rPath = request.getContextPath();
                     <a href="<%=rPath%>/level/levelList">사원레벨관리</a>
                 </li>
                 <li>
-                    <a href="#">부서관리</a>
+                    <a href="<%=rPath%>/depart/departList">부서관리</a>
                 </li>
                 <li>
                     <a href="#">이력서</a>

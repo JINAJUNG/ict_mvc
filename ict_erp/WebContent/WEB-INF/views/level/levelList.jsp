@@ -25,9 +25,9 @@
 					<c:forEach items="${liList}" var="li">
 						<tr>
 							<td>${li.liNum}</td>
-							<td>${li.liLevel}</td>
-							<td>${li.liName}</td>
-							<td>${li.liDesc}</td>
+							<td><input type="number" value="${li.liLevel}" name="uliLevel"></td>
+							<td><input type="text" value="${li.liName}" name="uiName"></td>
+							<td><input type="text" value="${li.liDesc}" name="uiDesc" onchange=""></td>
 							<td><input type="checkbox" name="liNum" value="${li.liNum}"></td>
 						</tr>
 					</c:forEach>
@@ -44,12 +44,12 @@
 				<button id="del" onclick="deleteLevel()">레벨삭제</button>
 			</div>
 			<div class="search">
-				<select id="searchK">
+				<select id="searchK"  name="searchK">
 					<option value="liNum">번호</option>
 					<option value="liLevel">등급</option>
 					<option value="liName">명칭</option>
 					<option value="liDesc">설명</option>
-				</select> <input type="text" id="searchV">
+				</select> <input type="text" id="searchV" name="searchV">
 				<button id="search" onclick="searchLevel()">검색</button>
 			</div>
 		</div>
@@ -89,7 +89,16 @@
 
 		}
 		function makeParam(name) {
-			var objs = document.querySelectorAll('input[name=' + name + ']');
+			var selector = 'input[name='+name+']';
+			if(!document.querySelector(selector)){
+				selector = 'select[name='+name+']';
+				if(!document.querySelector(selector)){
+					selector = 'textarea[name='+name+']';
+				}
+			}
+			console.log('1'+selector);
+			var objs = document.querySelectorAll(selector);
+			
 			var param = '';
 			console.log(objs.length);
 			for (var i = 0; i < objs.length; i++) {
@@ -101,11 +110,15 @@
 			var params = makeParam('liLevel');
 			params += makeParam('liName');
 			params += makeParam('liDesc');
+			params += makeParam('liNum');
+			params += makeParam('uLiLevel');
+			params += makeParam('uLiName');
+			params += makeParam('uLiDesc');
+			alert(makeParam('liNum'));
 			location.href = '/level/saveLevelList?' + params;
 		}
 		function deleteLevel() {
-			var box = document
-					.querySelectorAll('td>input[type="checkbox"]:checked');
+			var box = document.querySelectorAll('td>input[type="checkbox"]:checked');
 			var params = '';
 			for (var i = 0; i < box.length; i++) {
 				params += box[i].name + '=' + box[i].value + '&';
@@ -113,13 +126,16 @@
 			location.href = '/level/deletelList?' + params;
 		}
 		function searchLevel(){
-			var searchK = document.querySelector('#searchK').value;
+			var params = makeParam('searchK');
+			params += makeParam('searchV');
+			console.log('/level/levelList?'+params);
+	
+			/* var searchK = document.querySelector('#searchK').value;
 			var searchV = document.querySelector('#searchV').value;
-			console.log(searchK);
-			console.log('값'+searchV);
-			console.log('/level/levelList?' +'sType='+searchK+'&'+'sValue='+searchV);
-			location.href = '/level/levelList?' +'sType='+searchK+'&'+'sValue='+searchV;
+			location.href = '/level/levelList?' +'searchK='+searchK+'&'+'searchV='+searchV; */
+			location.href = '/level/levelList?' +params;
 		}
+		//자바스크립트만가능(모두 boolean타입으로 동작한다) : a='', a=null,a=undifinded,a=true -> if(!a) :a는 널이 아니면,언디파인드가 아니면, 공란이 아니면, 트루가 아니면 모두 false  
 	</script>
 	<jsp:include page="/WEB-INF/views/menu/bottom.jsp" />
 	

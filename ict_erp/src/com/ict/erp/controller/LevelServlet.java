@@ -33,22 +33,25 @@ public class LevelServlet extends HttpServlet {
 			if(cmd==null|| cmd.equals("")) {
 				uri = "/views/notFound";
 			}else if(cmd.equals("levelList")) {
-				String searchK = request.getParameter("sType");
-				String searchV = request.getParameter("sValue");
+				String searchK = request.getParameter("searchK");
+				String searchV = request.getParameter("searchV");
 				LevelInfo li = null;
 				System.out.println(searchK);
 				System.out.println(searchV);
+				
 				if(searchK!=null) {
-					li = new LevelInfo();
-					if(searchK.equals("liNum")) {
-						li.setLiNum(Integer.parseInt(searchV));
-					}else if(searchK.equals("liLevel")) {
-						li.setLiLevel(Integer.parseInt(searchV));
-					}else if(searchK.equals("liName")) {
-						li.setLiName(searchV);
-					}else if(searchK.equals("liDesc")) {
-						li.setLiDesc(searchV);
-					}	
+					if(searchV.length()!=0 && !searchV.equals("") && searchV!=null) {
+						li = new LevelInfo();
+						if(searchK.equals("liNum")) {
+							li.setLiNum(Integer.parseInt(searchV));
+						}else if(searchK.equals("liLevel")) {
+							li.setLiLevel(Integer.parseInt(searchV));
+						}else if(searchK.equals("liName")) {
+							li.setLiName(searchV);
+						}else if(searchK.equals("liDesc")) {
+							li.setLiDesc(searchV);
+						}
+					}
 				}
 				
 				request.setAttribute("liList", ls.getLiList(li));
@@ -61,9 +64,22 @@ public class LevelServlet extends HttpServlet {
 					LevelInfo li = new LevelInfo(0, Integer.parseInt(liLevels[i]), liNames[i], liDesc[i]);
 					iList.add(li);
 				}
+				String[] liNumStrs =  request.getParameterValues("liNum");
+				liNames = request.getParameterValues("uLiName");
+				liLevels = request.getParameterValues("uLiLevel");
+				liDesc = request.getParameterValues("uLiDesc");
+				List<LevelInfo> uList = new ArrayList<LevelInfo>();
+				if(liNumStrs!=null) {
+					for(int i=0;i<liNumStrs.length;i++) {
+						int num = Integer.parseInt(liNumStrs[i]);
+						int level = Integer.parseInt(liLevels[i]);
+						LevelInfo li = new LevelInfo(num,level,liNames[i],liDesc[i]);
+						uList.add(li);
+					}
+				}
 				Map<String,List<LevelInfo>> map = new HashMap<String, List<LevelInfo>>();
 				map.put("iList", iList);
-				map.put("uList", new ArrayList<LevelInfo>());
+				map.put("uList", uList);
 				Map<String,Object> rMap = ls.insertNUpdateLiList(map);
 				request.setAttribute("rMap", rMap);
 				uri="/views/level/levelList";

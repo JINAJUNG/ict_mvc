@@ -11,15 +11,19 @@ String uri = request.getRequestURI();
         $('#wrapper').toggleClass('toggled');
     });
     $(document).ready(function(){
-    	var uri = '<%=uri%>';
-    	uri = uri.replace('/WEB-INF/views','');
-    	uri = uri.replace('.jsp','');
-    	var navs = document.querySelectorAll('.sidebar-nav li');
-    	for(var i=0;i<navs.length;i++){
-    		navs[i].classList.remove('active');
+    	try{
+    		var uri = '<%=uri%>';
+        	uri = uri.replace('/WEB-INF/views','');
+        	uri = uri.replace('.jsp','');
+        	var navs = document.querySelectorAll('.sidebar-nav li');
+        	for(var i=0;i<navs.length;i++){
+        		navs[i].classList.remove('active');
+        	}
+        	var nav = document.querySelector('.sidebar-nav li a[href="' + uri +'"]');
+        	nav.parentNode.classList.add('active');
+    	}catch(e){
+    		console.log("메뉴옴또 쨔쟌형"+e)
     	}
-    	var nav = document.querySelector('.sidebar-nav li a[href="' + uri +'"]');
-    	nav.parentNode.classList.add('active');
         $('#wrapper').toggleClass('toggled');
     })
 </script>
