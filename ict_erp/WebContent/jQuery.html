@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	이름
+	<input type="text" name="name">
+	<br> 나이
+	<input type="text" name="age">
+	<br>
+	<button id="save">저장</button>
+	<button id="see">보기</button>
+	<div class="rDiv">
+		<table border='1'>
+			<tr>
+				<th><input type="checkbox" id="chAll"></th>
+				<th>이름</th>
+				<th>나이</th>
+				<!-- 				<th>삭제</th> -->
+			</tr>
+			<tbody id="body">
+			</tbody>
+		</table>
+		<button id="del">삭제</button>
+	</div>
+	<script type="text/javascript">
+		var Inser = function(name, age) {
+			this.name = name;
+			this.age = age;
+
+			this.print = function() {
+				console.log(name);
+				console.log(age);
+			}
+		}
+
+		var i;
+		var memory = [];
+		document.querySelector('#save').onclick = function() {
+			var inputs = document.querySelectorAll('input');
+			i = new Inser(inputs[0].value, inputs[1].value);
+			memory.push({
+				name : i.name,
+				age : i.age
+			});
+		}
+		var rDivT = document.querySelector('.rDiv>table');
+		document.querySelector('#see').onclick = function() {
+			/* 			rDivT.innerHTML += "<tr><td>"
+			 + JSON.stringify(memory[memory.length - 1].name)
+			 + "</td><td>"
+			 + JSON.stringify(memory[memory.length - 1].age)
+			 + "</td><td><button>삭제</button></td></tr>"; */
+			makeList();
+		}
+
+		document.querySelector('#chAll').onclick = function() {
+			var box = document.querySelectorAll('td>input[type="checkbox"]');
+			for (var i = 0; i < box.length; i++) {
+				box[i].checked = document.querySelector('#chAll').checked;
+			}
+		}
+		function makeList() {
+			var html = '';
+			for (var i = 0; i < memory.length; i++) {
+				var m = memory[i];
+				html += '<td><input type="checkbox" value="'+i+'"></td>';
+				html += '<td>' + m.name + '</td>';
+				html += '<td>' + m.age + '</td>';
+				/* html += '<td><button onclick="deletePerson(' + i + ')">삭제</button></td>'; */
+				html += '</tr>';
+			}
+			document.querySelector('#body').innerHTML = html;
+		}
+		function deletePerson(idx) {
+			memory.splice(idx, 1);
+			makeList();
+		}
+
+		document.querySelector('#del').onclick = function() {
+			var box = document.querySelectorAll('td>input[type="checkbox"]:checked'); //]:checked -> ]뒤에붙임 
+			if (document.querySelector('#chAll').checked == true) {
+				memory.splice(0, memory.length);
+				makeList();
+				return;
+			}
+			var cnt = 0;
+			for (var i = 0; i < box.length; i++) {
+				var idx = box[i].value;
+				idx -= cnt;
+				memory.splice(idx, 1);
+				cnt++;
+			}
+			makeList();
+		}
+
+		/* 		var pc = {cpu:'i7',ram:'16G',ssd:'120GB'};
+		 var str='cpu';
+		 alert(pc.cpu);
+		 alert(pc[str]); --map
+		 ////////////////////////
+		 var PC = function(cpu,ram,ssd){ //-객체구조
+		 this.cpu=cpu;
+		 this.ram=ram;
+		 this.ssd=ssd;
+		
+		 this.print = function(){
+		 console.log("cpu : "+this.cpu);
+		 console.log("ram : "+this.ram);
+		 console.log("ssd : "+this.ssd);
+		 }
+		 }
+		 var p = new PC('i5','8gb','250gb');
+		 printObj(p);
+		 //alert(p.cpu);
+		 ////////////////////////
+		 function printObj(obj){
+		 obj.print();
+		 } */
+	</script>
+</body>
+</html>
