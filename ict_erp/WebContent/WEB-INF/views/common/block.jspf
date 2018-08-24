@@ -1,0 +1,21 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<div class="page" style="text-align: center">
+	<nav aria-label="Page navigation example ">
+		<ul class="pagination justify-content-center">
+			<c:if test="${page.sBlock!=1}">
+				<li class="page-item"><a
+					href="${rPath}/depart/departList?page=${page.sBlock-page.blockSize}"
+					 class="page-link" >Previous</a></li>
+			</c:if>
+			<c:forEach begin="${page.sBlock}" end="${page.lBlock}" var="p">
+				<li class="page-item"><a href="${rPath}/depart/departList?page=${p}"  class="page-link" >${p}</a>
+				</li>
+			</c:forEach>
+			<c:if test="${page.lBlock!=page.totalPage}">
+				<li class="page-item"><a
+					href="${rPath}/depart/departList?page=${page.sBlock+page.blockSize}"
+					 class="page-link" >Next</a></li>
+			</c:if>
+		</ul>
+	</nav>
+</div>

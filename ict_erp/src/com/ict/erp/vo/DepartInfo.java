@@ -5,6 +5,14 @@ public class DepartInfo {
 	private String diCode;
 	private String diName;
 	private String diDesc;
+	private PageInfo pi;
+	
+	public PageInfo getPi() {
+		return pi;
+	}
+	public void setPi(PageInfo pi) {
+		this.pi = pi;
+	}
 	public DepartInfo() {
 		
 	}
