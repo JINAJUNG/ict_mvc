@@ -19,4 +19,15 @@
 <script src="<%=rPath%>/vendor/jquery/jquery.min.js"></script>
 <script src="<%=rPath%>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<%=rPath%>/vendor/common.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	var btns = document.querySelectorAll('button[data-page]');
+	for(var btn of btns){
+		btn.setAttribute('type','button');
+		btn.onclick = function(){
+			location.href = btn.getAttribute('data-page');
+		}
+	}
+}
+</script>
 </head>

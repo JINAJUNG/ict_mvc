@@ -18,13 +18,13 @@
 				</thead>
 				<tbody id='diTbody'>
 					<c:forEach items="${diList}" var="di">
-						<tr>
-							<td>${di.diNum}</td>
-							<td>${di.diCode}</td>
-							<td>${di.diName}</td>
-							<td>${di.diDesc}</td>
-							<td>${di.diNum}</td>
-						</tr>
+							<tr onclick="goPage(${di.diNum})">
+								<td>${di.diNum}</td>
+								<td>${di.diCode}</td>
+								<td>${di.diName}</td>
+								<td>${di.diDesc}</td>
+								<td><input type="checkbox"></td>
+							</tr>
 					</c:forEach>
 					<c:if test="${empty diList}">
 						<tr>
@@ -33,7 +33,16 @@
 					</c:if>
 				</tbody>
 			</table>
-		<jsp:include page="/WEB-INF/views/common/block.jspf"></jsp:include>
+			<div class="btn">
+				<button data-page="/views/depart/departInsert"> 등록</button>
+			</div>
+			<jsp:include page="/WEB-INF/views/common/block.jspf"></jsp:include>
 		</div>
 	</div>
+	<script>
+		function goPage(diNum){
+			location.href='<%=rPath%>/depart/departView?diNum=' + diNum;
+		}
+	</script>
 	<jsp:include page="/WEB-INF/views/menu/bottom.jsp" />
+	

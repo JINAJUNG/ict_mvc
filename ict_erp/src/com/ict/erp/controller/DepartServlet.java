@@ -43,10 +43,11 @@ public class DepartServlet extends HttpServlet {
 				di.setPi(pi);
 				request.setAttribute("diList",ds.getDepartInfoList(di));
 				request.setAttribute("page", pi);
-			}else if(cmd.equals("depart")) {
-				
-			}else {
-				
+			}else if(cmd.equals("departView")) {
+				String diNumStr = request.getParameter("diNum");
+				int diNum = Integer.parseInt(diNumStr);
+				request.setAttribute("diOne", ds.getDepartInfo(diNum));
+			}else {		
 			}
 		}catch(SQLException e) {
 			
@@ -56,7 +57,25 @@ public class DepartServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doService(request, response);
+		String cmd = ICTUtils.getCmd(request.getRequestURI());
+		request.setCharacterEncoding("utf-8");
+		System.out.println(cmd);
+		try {
+			if(cmd.equals("departInsert")) {
+				String diCode = request.getParameter("diCode");
+				String diName = request.getParameter("diName");
+				String diDesc = request.getParameter("diDesc");
+				DepartInfo di = new DepartInfo(0,diCode,diName,diDesc);
+				request.setAttribute("rMap", ds.insertDepartInfo(di));
+				
+				
+			}else {
+				
+			}
+		}catch(Exception e) {
+			
+		}
+		doService(request,response);
 	}
 
 	public void doService(HttpServletRequest request, HttpServletResponse response)

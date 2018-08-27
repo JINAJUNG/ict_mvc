@@ -1,6 +1,7 @@
 package com.ict.erp.service.impl;
 
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -30,24 +31,44 @@ public class DepartServiceImpl implements DepartService {
 
 	@Override
 	public DepartInfo getDepartInfo(int diNum) throws SQLException {
+		ddao.setConnection(DBCon.getCon());
+		try {
+			return ddao.selectDepartInfo(diNum);
+		}catch (SQLException e) {
+			throw e;
+		}finally {
+			DBCon.close();
+		}
+		
+	}
+
+	@Override
+	public Map<String,Object> insertDepartInfo(DepartInfo di) throws SQLException {
+		ddao.setConnection(DBCon.getCon());
+		Map<String,Object> rMap= new HashMap<String,Object>();
+		try {
+			int cnt=ddao.insertDepartInfo(di);
+			rMap.put("cnt", cnt);
+			rMap.put("msg","fail..");
+			if(cnt==1) {
+				rMap.put("msg","success!!");	
+			}
+		}catch (SQLException e) {
+			throw e;
+		}finally {
+			DBCon.close();
+		}
+		return rMap;
+	}
+
+	@Override
+	public Map<String,Object> updateDepartInfo(DepartInfo di) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Map<String, Object> insertDepartInfo(DepartInfo di) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Map<String, Object> updateDepartInfo(DepartInfo di) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Map<String, Object> deleteDepartInfo(DepartInfo di) throws SQLException {
+	public Map<String,Object> deleteDepartInfo(DepartInfo di) throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
 	}
