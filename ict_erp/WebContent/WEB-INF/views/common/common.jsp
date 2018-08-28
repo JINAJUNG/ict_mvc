@@ -25,6 +25,7 @@ window.onload = function(){
 	for(var btn of btns){
 		btn.setAttribute('type','button');
 		btn.onclick = function(){
+			console.log(btn.getAttribute('data-page'));
 			location.href = btn.getAttribute('data-page');
 		}
 	}

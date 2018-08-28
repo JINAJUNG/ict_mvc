@@ -19,6 +19,10 @@
 		<th>${di.diName}</th>
 		<th>${di.diDesc}</th>
 	</tr>
+	<tr>
+	<td colspan="2"><button class="btn btn-primary">수정</button> </td>
+	<td colspan="2"><button class="btn btn-primary">삭제</button></td>
+	</tr>
 	</table>
 	</div>
 </div>

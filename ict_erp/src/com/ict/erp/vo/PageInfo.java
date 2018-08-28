@@ -129,7 +129,7 @@ public class PageInfo {
 		this.lBlock = this.sBlock + this.blockSize - 1;
 		if (this.lBlock > this.totalPage) {
 			this.lBlock = this.totalPage;		
-			this.sBlock =lBlock-blockSize;
+			/*this.sBlock =lBlock-blockSize;*/
 			/*
 			 * 만약 uri에 page값이 over될 경우 page값을 마지막 블럭 값으로 준 후 
 			 * startBlock는 마지막 블럭 값- 블럭사이즈를 해서 구한다.
