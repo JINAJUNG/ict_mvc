@@ -10,13 +10,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ict.erp.common.ICTUtils;
+import com.ict.erp.service.DepartService;
+import com.ict.erp.service.LevelService;
 import com.ict.erp.service.MemberService;
+import com.ict.erp.service.impl.DepartServiceImpl;
+import com.ict.erp.service.impl.LevelServiceImpl;
 import com.ict.erp.service.impl.MemberServiceImpl;
 import com.ict.erp.vo.MemberInfo;
 
 public class MemberServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private MemberService ms = new MemberServiceImpl();
+	private LevelService ls = new LevelServiceImpl();
+	private DepartService ds = new DepartServiceImpl();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -33,6 +39,9 @@ public class MemberServlet extends HttpServlet {
 				request.setAttribute("mi", ms.getMi(miNum));
 						
 				
+			}else if(cmd.equals("memberInsert")) {
+				request.setAttribute("liList", ls.getLiList(null));
+/*				request.setAttribute("diList", ds.getDepartInfoList(null));*/
 			}else {
 
 			}
@@ -67,6 +76,8 @@ public class MemberServlet extends HttpServlet {
 				MemberInfo mi = new MemberInfo((long) 0, id, name, pwd, dicode, lilevel, email, desc, phone, zipcode,
 						address1, address2, "", "");
 				request.setAttribute("rMap", ms.insertMi(mi));
+				MemberInfo miT = ICTUtils.parse(request, MemberInfo.class);
+				System.out.println(mi);
 				System.out.println("in");
 			}else {
 				

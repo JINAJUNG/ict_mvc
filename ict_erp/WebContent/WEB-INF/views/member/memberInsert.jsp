@@ -39,9 +39,10 @@ if(${rMap.cnt}==1){
 					<tr>
 						<th>사원 권한</th>
 						<td><select name="liLevel">
-								<option value="1">일반</option>
-								<option value="2">중간</option>
-								<option value="3">최고</option>
+								<option>선택</option>
+								<c:forEach items="${liList}" var="li">
+									<option value="${li.liLevel}">${li.liName}</option>
+								</c:forEach>
 						</select></td>
 					</tr>
 					<tr>
@@ -52,24 +53,24 @@ if(${rMap.cnt}==1){
 						<th>사원 비고</th>
 						<td><input type="text" name="miDesc"></td>
 					</tr>
-										<tr>
+					<tr>
 						<th>사원 핸드폰 번호</th>
 						<td><input type="tel" name="miPhone"></td>
 					</tr>
-										<tr>
+					<tr>
 						<th>사원 우편번호</th>
 						<td><input type="number" name="miZipcode"></td>
 					</tr>
-										<tr>
+					<tr>
 						<th>사원 주소1</th>
 						<td><input type="text" name="miAddress1"></td>
 					</tr>
-										<tr>
+					<tr>
 						<th>사원 주소2</th>
 						<td><input type="text" name="miAddress2"></td>
 					</tr>
 					<tr>
-					<td colspan="2"><button class="btn btn-primary">등록</button></td>
+						<td colspan="2"><button class="btn btn-primary">등록</button></td>
 					</tr>
 				</table>
 			</form>
