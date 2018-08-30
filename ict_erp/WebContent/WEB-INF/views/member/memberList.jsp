@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/common/common.jsp"%>
+
 <body>
 	<div id="wrapper">
 		<jsp:include page="/WEB-INF/views/menu/left.jsp" />
 		<div id="page-content-wrapper">
-			<c:if test="${empty miList}">
-	test 성공
-	</c:if>
+
 			<table class="table table-bordered table-hover">
 				<tr>
 					<th>번호</th>
@@ -28,7 +27,8 @@
 					</tr>
 				</c:if>
 				<c:forEach var="mi" items="${miList}">
-					<tr onclick="window.location='/member/memberView?minum=${mi.miNum}'">
+					<tr
+						onclick="window.location='/member/memberView?minum=${mi.miNum}'">
 						<td>${mi.miNum}</td>
 						<td>${mi.miName}</td>
 						<td>${mi.miId}</td>

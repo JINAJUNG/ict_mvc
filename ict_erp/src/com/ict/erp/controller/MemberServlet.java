@@ -23,10 +23,10 @@ public class MemberServlet extends HttpServlet {
 	private MemberService ms = new MemberServiceImpl();
 	private LevelService ls = new LevelServiceImpl();
 	private DepartService ds = new DepartServiceImpl();
-
+	public String uri = "";
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String uri = request.getRequestURI();
+		uri = request.getRequestURI();
 		String cmd = ICTUtils.getCmd(uri);
 		System.out.println(uri);
 		try {
@@ -37,11 +37,15 @@ public class MemberServlet extends HttpServlet {
 				int miNum = Integer.parseInt(num);
 				System.out.println(miNum);
 				request.setAttribute("mi", ms.getMi(miNum));
-						
-				
 			}else if(cmd.equals("memberInsert")) {
 				request.setAttribute("liList", ls.getLiList(null));
 /*				request.setAttribute("diList", ds.getDepartInfoList(null));*/
+			}else if(cmd.equals("memberUpdate")){
+				String num= request.getParameter("miNum");
+				int miNum = Integer.parseInt(num);
+				System.out.println(miNum);
+				request.setAttribute("mi", ms.getMi(miNum));
+				request.setAttribute("liList", ls.getLiList(null));
 			}else {
 
 			}
@@ -53,9 +57,8 @@ public class MemberServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String uri = request.getRequestURI();
+		uri = request.getRequestURI();
 		String cmd = ICTUtils.getCmd(uri);
-		request.setCharacterEncoding("utf-8");
 		System.out.println(cmd);
 		try {
 			if (cmd.equals("memberInsert")) {
@@ -79,6 +82,18 @@ public class MemberServlet extends HttpServlet {
 				MemberInfo miT = ICTUtils.parse(request, MemberInfo.class);
 				System.out.println(mi);
 				System.out.println("in");
+			}else if(cmd.equals("memberDelete")) {
+				String miNumStr = request.getParameter("miNum");
+				int miNum = Integer.parseInt(miNumStr);
+				MemberInfo mi = new MemberInfo();
+				mi.setMiNum((long)miNum);
+				request.setAttribute("rMap", ms.deleteMi(mi));
+				uri = "/member/memberView";
+			}else if(cmd.equals("memberUpdate")) {
+				MemberInfo miT = ICTUtils.parse(request, MemberInfo.class);
+				System.out.println(miT);
+				System.out.println("in");
+				request.setAttribute("rMap", ms.updateMi(miT));
 			}else {
 				
 			}
@@ -91,8 +106,7 @@ public class MemberServlet extends HttpServlet {
 
 	public void doService(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String uri = "/views" + request.getRequestURI();
-		response.setCharacterEncoding("utf-8");
+		uri = "/views" + uri;
 		RequestDispatcher rd = request.getRequestDispatcher(uri);
 		rd.forward(request, response);
 	}

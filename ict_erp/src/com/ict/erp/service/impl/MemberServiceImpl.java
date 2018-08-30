@@ -58,9 +58,8 @@ public class MemberServiceImpl implements MemberService {
 		try {
 			int cnt = mdao.insertMi(mi);
 			rMap.put("cnt", cnt);
-			if (cnt == 0) {
-				rMap.put("msg", "실패");
-			} else {
+			rMap.put("msg", "실패");
+			if (cnt ==1) {
 				rMap.put("msg", "성공");
 			}
 			return rMap;
@@ -74,14 +73,44 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public Map<String, Object> updateMi(MemberInfo mi) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		mdao.setConnection(DBCon.getCon());
+		Map<String, Object> rMap = new HashMap<String, Object>();
+		try {
+			int cnt = mdao.updateMi(mi);
+			rMap.put("cnt", cnt);
+			rMap.put("msg", "실패");
+			if (cnt ==1) {
+				rMap.put("msg", "성공");
+			}
+			return rMap;
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			DBCon.close();
+		}
+
 	}
 
 	@Override
 	public Map<String, Object> deleteMi(MemberInfo mi) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Map<String,Object> rMap = new HashMap<String,Object>();
+		mdao.setConnection(DBCon.getCon());
+		try {
+			int cnt = mdao.deleteMi(mi);
+			rMap.put("cnt", cnt);
+			rMap.put("msg", "실패");
+			if(cnt==1) {
+				rMap.put("msg", "성공");
+			}
+		}catch (SQLException e) {
+			DBCon.rollback();
+			rMap.put("cnt", 0);
+			throw e;
+		}finally {
+			DBCon.close();
+		}
+		
+		return rMap;
 	}
 
 }

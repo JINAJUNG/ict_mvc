@@ -33,7 +33,6 @@ public class MemberDAOImpl extends CommonDAOImpl implements MemberDAO {
 				mmi.setLiName(rs.getString("liname"));
 				miList.add(mmi);
 			}
-			System.out.println(miList);
 			return miList;
 		} catch (SQLException e) {
 			throw e;
@@ -104,12 +103,56 @@ public class MemberDAOImpl extends CommonDAOImpl implements MemberDAO {
 
 	@Override
 	public int updateMi(MemberInfo mi) throws SQLException {
-		return 0;
+		String sql = "update member_info set miName =? ,"
+				+ "miPwd=?,"
+				+ "Dicode=?,"
+				+ "lilevel=?,"
+				+ "miemail=?,"
+				+ "midesc=?,"
+				+ "miphone=?,"
+				+ "mizipcode=?,"
+				+ "miaddress1=?,"
+				+ "miaddress2=?"
+				+ "where miNum=?";
+		try {
+			ps = con.prepareStatement(sql);
+			
+			ps.setString(1, mi.getMiName());
+			ps.setString(2, mi.getMiPwd());
+			ps.setString(3, mi.getDiCode());
+			ps.setLong(4, mi.getLiLevel());
+			ps.setString(5, mi.getMiEmail());
+			ps.setString(6, mi.getMiDesc());
+			ps.setString(7, mi.getMiPhone());
+			ps.setString(8, mi.getMiZipcode());
+			ps.setString(9, mi.getMiAddress1());
+			ps.setString(10, mi.getMiAddress2());
+			ps.setLong(11,mi.getMiNum());
+			
+			return ps.executeUpdate();
+
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close();
+		}
 	}
 
 	@Override
 	public int deleteMi(MemberInfo mi) throws SQLException {
-		return 0;
+		String sql = "delete from member_Info where miNum=?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setLong(1, mi.getMiNum());
+
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			DBCon.rollback();
+			throw e;
+		} finally {
+			close();
+		}
+
 	}
 
 	public static void main(String[] args) {
