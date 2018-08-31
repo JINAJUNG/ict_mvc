@@ -52,7 +52,7 @@ public class DepartServlet extends HttpServlet {
 			} else {
 			}
 		} catch (SQLException e) {
-
+			e.printStackTrace();
 		}
 		doService(request, response);
 	}
@@ -76,17 +76,19 @@ public class DepartServlet extends HttpServlet {
 				String diName = request.getParameter("diName");
 				String diDesc = request.getParameter("diDesc");
 				DepartInfo di = new DepartInfo(Integer.parseInt(diNum), diCode, diName, diDesc);
+				System.out.println(di);
 				request.setAttribute("map", ds.updateDepartInfo(di));
 			
 			} else if (cmd.equals("departDelete")) {
 				String diNum = request.getParameter("diNum");
 				DepartInfo di = new DepartInfo(Integer.parseInt(diNum), null, null, null);
 				request.setAttribute("map", ds.deleteDepartInfo(di));
+
 			} else {
 
 			}
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		}
 		doService(request, response);
 	}
