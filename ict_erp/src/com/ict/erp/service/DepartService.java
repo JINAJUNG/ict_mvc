@@ -6,7 +6,7 @@ import java.util.Map;
 
 import com.ict.erp.vo.DepartInfo;
 
-public interface DepartService {
+public interface DepartService extends CommonService{
 	public List<DepartInfo> getDepartInfoList(DepartInfo di) throws SQLException;
 	public DepartInfo getDepartInfo(int diNum) throws SQLException;
 	public Map<String,Object> insertDepartInfo(DepartInfo di) throws SQLException;

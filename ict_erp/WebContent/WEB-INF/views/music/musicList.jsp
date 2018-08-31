@@ -17,15 +17,15 @@
 					<th>곡 설명</th>
 				</tr>
 				<c:forEach var="music" items="${musicList}">
-					<tr>
-					<td>${music.mcNum}</td>
-					<td>${music.mcName}</td>
-					<td>${music.mcSinger}</td>
-					<td>${music.mcVendor}</td>
-					<td>${music.mcLike}</td>
-					<td>${music.mcDisLike}</td>
-					<td>${music.mcCredate}</td>
-					<td>${music.mcDesc}</td>
+					<tr onclick="window.location='/music/musicView?mcNum=${music.mcNum}'">
+						<td>${music.mcNum}</td>
+						<td>${music.mcName}</td>
+						<td>${music.mcSinger}</td>
+						<td>${music.mcVendor}</td>
+						<td>${music.mcLike}</td>
+						<td>${music.mcDisLike}</td>
+						<td>${music.mcCredate}</td>
+						<td>${music.mcDesc}</td>
 					</tr>
 				</c:forEach>
 				<c:if test="${empty musicList}">
@@ -33,6 +33,9 @@
 						<td colspan="8">등록된 노래가 없는걸~?</td>
 					</tr>
 				</c:if>
+				<tr>
+					<td colspan="8"><button class="btn btn-primary" data-page="/music/musicIn">노래 등록</button> </td>
+				</tr>
 			</table>
 		</div>
 	</div>

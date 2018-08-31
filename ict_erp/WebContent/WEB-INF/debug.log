@@ -1,0 +1,368 @@
+[2018-08-31 13:43:34,590] INFO (AuthFilter.java:33):/music/musicList
+[2018-08-31 13:43:34,608] WARN (AuthFilter.java:35):/music/musicList
+[2018-08-31 13:43:34,608]ERROR (AuthFilter.java:37):/music/musicList
+[2018-08-31 13:43:34,608]FATAL (AuthFilter.java:39):/music/musicList
+[2018-08-31 16:06:20,702] INFO (AuthFilter.java:33):/
+[2018-08-31 16:06:20,702] INFO (AuthFilter.java:33):/user/depart.jsp
+[2018-08-31 16:06:20,710] WARN (AuthFilter.java:35):/
+[2018-08-31 16:06:20,712] WARN (AuthFilter.java:35):/user/depart.jsp
+[2018-08-31 16:06:20,712]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:06:20,713]ERROR (AuthFilter.java:37):/user/depart.jsp
+[2018-08-31 16:06:20,713]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:06:20,713]FATAL (AuthFilter.java:39):/user/depart.jsp
+[2018-08-31 16:06:27,003] INFO (AuthFilter.java:33):/user/departList
+[2018-08-31 16:06:27,003] WARN (AuthFilter.java:35):/user/departList
+[2018-08-31 16:06:27,004]ERROR (AuthFilter.java:37):/user/departList
+[2018-08-31 16:06:27,004]FATAL (AuthFilter.java:39):/user/departList
+[2018-08-31 16:06:28,381] INFO (AuthFilter.java:33):/member/memberList
+[2018-08-31 16:06:28,381] WARN (AuthFilter.java:35):/member/memberList
+[2018-08-31 16:06:28,382]ERROR (AuthFilter.java:37):/member/memberList
+[2018-08-31 16:06:28,382]FATAL (AuthFilter.java:39):/member/memberList
+[2018-08-31 16:06:32,596] INFO (AuthFilter.java:33):/member/memberInsert
+[2018-08-31 16:06:32,596] WARN (AuthFilter.java:35):/member/memberInsert
+[2018-08-31 16:06:32,597]ERROR (AuthFilter.java:37):/member/memberInsert
+[2018-08-31 16:06:32,597]FATAL (AuthFilter.java:39):/member/memberInsert
+[2018-08-31 16:06:34,143] INFO (AuthFilter.java:33):/member/memberView
+[2018-08-31 16:06:34,144] WARN (AuthFilter.java:35):/member/memberView
+[2018-08-31 16:06:34,144]ERROR (AuthFilter.java:37):/member/memberView
+[2018-08-31 16:06:34,144]FATAL (AuthFilter.java:39):/member/memberView
+[2018-08-31 16:06:35,245] INFO (AuthFilter.java:33):/member/memberUpdate
+[2018-08-31 16:06:35,245] WARN (AuthFilter.java:35):/member/memberUpdate
+[2018-08-31 16:06:35,247]ERROR (AuthFilter.java:37):/member/memberUpdate
+[2018-08-31 16:06:35,247]FATAL (AuthFilter.java:39):/member/memberUpdate
+[2018-08-31 16:06:45,292] INFO (AuthFilter.java:33):/level/levelList
+[2018-08-31 16:06:45,293] WARN (AuthFilter.java:35):/level/levelList
+[2018-08-31 16:06:45,294]ERROR (AuthFilter.java:37):/level/levelList
+[2018-08-31 16:06:45,298]FATAL (AuthFilter.java:39):/level/levelList
+[2018-08-31 16:06:49,258] INFO (AuthFilter.java:33):/level/saveLevelList
+[2018-08-31 16:06:49,259] WARN (AuthFilter.java:35):/level/saveLevelList
+[2018-08-31 16:06:49,259]ERROR (AuthFilter.java:37):/level/saveLevelList
+[2018-08-31 16:06:49,259]FATAL (AuthFilter.java:39):/level/saveLevelList
+[2018-08-31 16:06:51,276] INFO (AuthFilter.java:33):/level/levelList
+[2018-08-31 16:06:51,277] WARN (AuthFilter.java:35):/level/levelList
+[2018-08-31 16:06:51,277]ERROR (AuthFilter.java:37):/level/levelList
+[2018-08-31 16:06:51,277]FATAL (AuthFilter.java:39):/level/levelList
+[2018-08-31 16:06:52,025] INFO (AuthFilter.java:33):/level/deletelList
+[2018-08-31 16:06:52,026] WARN (AuthFilter.java:35):/level/deletelList
+[2018-08-31 16:06:52,026]ERROR (AuthFilter.java:37):/level/deletelList
+[2018-08-31 16:06:52,026]FATAL (AuthFilter.java:39):/level/deletelList
+[2018-08-31 16:06:52,851] INFO (AuthFilter.java:33):/level/deletelList
+[2018-08-31 16:06:52,851] WARN (AuthFilter.java:35):/level/deletelList
+[2018-08-31 16:06:52,851]ERROR (AuthFilter.java:37):/level/deletelList
+[2018-08-31 16:06:52,854]FATAL (AuthFilter.java:39):/level/deletelList
+[2018-08-31 16:06:54,270] INFO (AuthFilter.java:33):/level/levelList
+[2018-08-31 16:06:54,270] WARN (AuthFilter.java:35):/level/levelList
+[2018-08-31 16:06:54,270]ERROR (AuthFilter.java:37):/level/levelList
+[2018-08-31 16:06:54,271]FATAL (AuthFilter.java:39):/level/levelList
+[2018-08-31 16:06:55,441] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:55,441] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:55,442]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:55,442]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:56,297] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:56,299] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:56,299]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:56,299]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:56,839] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:56,840] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:56,840]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:56,840]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:57,019] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:57,019] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:57,019]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:57,019]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:57,212] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:57,212] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:57,212]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:57,212]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:57,378] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:57,378] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:57,379]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:57,379]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:57,536] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:57,536] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:57,536]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:57,537]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:06:57,732] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:06:57,732] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:06:57,732]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:06:57,732]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:07:25,379] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:07:25,380] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:07:25,380]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:07:25,380]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:07:49,612] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:07:49,612] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:07:49,613]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:07:49,613]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:07:53,725] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:07:53,725] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:07:53,725]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:07:53,726]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:08:00,954] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:08:00,970] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:08:00,970]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:08:00,970]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:08:06,972] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:08:06,975] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:08:06,975]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:08:06,976]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:09:38,225] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:09:38,232] INFO (AuthFilter.java:33):/
+[2018-08-31 16:09:38,243] WARN (AuthFilter.java:35):/
+[2018-08-31 16:09:38,243]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:09:38,243]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:09:38,242] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:09:38,245]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:09:38,245]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:10:35,307] INFO (AuthFilter.java:33):/
+[2018-08-31 16:10:35,307] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:10:35,325] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:10:35,326]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:10:35,326]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:10:35,325] WARN (AuthFilter.java:35):/
+[2018-08-31 16:10:35,333]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:10:35,333]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:11:15,536] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:11:15,550] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:11:15,550]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:11:15,550]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:11:15,551] INFO (AuthFilter.java:33):/
+[2018-08-31 16:11:15,553] WARN (AuthFilter.java:35):/
+[2018-08-31 16:11:15,554]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:11:15,554]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:12:05,905] INFO (AuthFilter.java:33):/
+[2018-08-31 16:12:05,919] WARN (AuthFilter.java:35):/
+[2018-08-31 16:12:05,919]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:12:05,919]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:12:05,906] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:12:05,927] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:12:05,928]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:12:05,928]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:12:12,733] INFO (AuthFilter.java:33):/views/depart/departInsert
+[2018-08-31 16:12:12,735] WARN (AuthFilter.java:35):/views/depart/departInsert
+[2018-08-31 16:12:12,735]ERROR (AuthFilter.java:37):/views/depart/departInsert
+[2018-08-31 16:12:12,735]FATAL (AuthFilter.java:39):/views/depart/departInsert
+[2018-08-31 16:12:15,542] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:12:15,544] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:12:15,545]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:12:15,546]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:32:56,518] INFO (AuthFilter.java:33):/
+[2018-08-31 16:32:56,530] WARN (AuthFilter.java:35):/
+[2018-08-31 16:32:56,531]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:32:56,531]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:36:32,115] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:36:32,128] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:36:32,129]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:36:32,129]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:36:34,532] INFO (AuthFilter.java:33):/views/depart/departInsert
+[2018-08-31 16:36:34,534] WARN (AuthFilter.java:35):/views/depart/departInsert
+[2018-08-31 16:36:34,534]ERROR (AuthFilter.java:37):/views/depart/departInsert
+[2018-08-31 16:36:34,534]FATAL (AuthFilter.java:39):/views/depart/departInsert
+[2018-08-31 16:36:40,226] INFO (AuthFilter.java:33):/depart/departInsert
+[2018-08-31 16:36:40,226] WARN (AuthFilter.java:35):/depart/departInsert
+[2018-08-31 16:36:40,226]ERROR (AuthFilter.java:37):/depart/departInsert
+[2018-08-31 16:36:40,226]FATAL (AuthFilter.java:39):/depart/departInsert
+[2018-08-31 16:36:41,229] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:36:41,230] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:36:41,230]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:36:41,230]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:36:42,178] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:36:42,178] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:36:42,179]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:36:42,179]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:36:46,989] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:36:46,989] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:36:46,989]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:36:46,989]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:38:59,531] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:38:59,549] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:38:59,550]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:38:59,550]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:39:09,811] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:39:09,814] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:39:09,814]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:39:09,814]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:39:28,003] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:39:28,008] INFO (AuthFilter.java:33):/
+[2018-08-31 16:39:28,014] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:39:28,014]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:39:28,014]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:39:28,014] WARN (AuthFilter.java:35):/
+[2018-08-31 16:39:28,015]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:39:28,015]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:39:45,826] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:39:45,830] INFO (AuthFilter.java:33):/
+[2018-08-31 16:39:45,838] WARN (AuthFilter.java:35):/
+[2018-08-31 16:39:45,838] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:39:45,838]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:39:45,839]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:39:45,839]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:39:45,839]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:39:48,928] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:39:48,929] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:39:48,929]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:39:48,930]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:39:52,068] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:39:52,068] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:39:52,068]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:39:52,068]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:39:53,955] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:39:53,955] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:39:53,955]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:39:53,956]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:39:54,430] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:39:54,430] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:39:54,430]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:39:54,430]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:40:12,200] INFO (AuthFilter.java:33):/
+[2018-08-31 16:40:12,212] WARN (AuthFilter.java:35):/
+[2018-08-31 16:40:12,213]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:40:12,213]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:45:51,256] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:45:51,273] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:45:51,274]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:45:51,274]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:48:32,357] INFO (AuthFilter.java:33):/
+[2018-08-31 16:48:32,366] WARN (AuthFilter.java:35):/
+[2018-08-31 16:48:32,367]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:48:32,367]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:49:16,847] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:49:16,859] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:49:16,859]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:49:16,859]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:49:16,848] INFO (AuthFilter.java:33):/
+[2018-08-31 16:49:16,870] WARN (AuthFilter.java:35):/
+[2018-08-31 16:49:16,870]ERROR (AuthFilter.java:37):/
+[2018-08-31 16:49:16,871]FATAL (AuthFilter.java:39):/
+[2018-08-31 16:49:21,883] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:49:21,883] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:49:21,883]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:49:21,883]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:49:40,577] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:49:40,578] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:49:40,578]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:49:40,578]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:49:44,001] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:49:44,002] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:49:44,002]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:49:44,002]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:49:44,857] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:49:44,857] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:49:44,858]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:49:44,858]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:49:45,531] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:49:45,531] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:49:45,532]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:49:45,532]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:49:48,413] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:49:48,413] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:49:48,413]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:49:48,413]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:51:08,370] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:51:08,380] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:51:08,380]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:51:08,381]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:51:10,115] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:10,117] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:10,117]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:10,118]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:11,436] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:51:11,436] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:51:11,436]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:51:11,436]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:51:14,164] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:51:14,165] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:51:14,165]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:51:14,165]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:51:23,059] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:51:23,067] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:51:23,067]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:51:23,067]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:51:24,871] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:24,873] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:24,873]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:24,873]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:25,924] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:51:25,925] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:51:25,925]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:51:25,925]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:51:26,678] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:51:26,679] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:51:26,679]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:51:26,679]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:51:27,302] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:27,303] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:27,303]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:27,304]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:29,160] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:29,160] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:29,160]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:29,161]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:29,771] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:29,771] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:29,771]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:29,771]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:30,337] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:30,338] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:30,338]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:30,338]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:30,865] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:51:30,866] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:51:30,866]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:51:30,866]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:51:32,122] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:51:32,122] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:51:32,122]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:51:32,123]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:51:33,321] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:33,321] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:33,321]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:33,321]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:51:35,039] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:51:35,040] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:51:35,040]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:51:35,041]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:52:09,744] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:52:09,745] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:52:09,745]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:52:09,746]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:52:10,459] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:52:10,459] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:52:10,459]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:52:10,459]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:52:11,572] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:52:11,573] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:52:11,573]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:52:11,573]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:52:12,272] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:52:12,272] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:52:12,272]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:52:12,273]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:52:19,295] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:52:19,306] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:52:19,306]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:52:19,306]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:52:20,923] INFO (AuthFilter.java:33):/depart/departUpdate
+[2018-08-31 16:52:20,925] WARN (AuthFilter.java:35):/depart/departUpdate
+[2018-08-31 16:52:20,926]ERROR (AuthFilter.java:37):/depart/departUpdate
+[2018-08-31 16:52:20,926]FATAL (AuthFilter.java:39):/depart/departUpdate
+[2018-08-31 16:52:21,552] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:52:21,553] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:52:21,553]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:52:21,553]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:57:29,453] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:57:29,453] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:57:29,453]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:57:29,454]FATAL (AuthFilter.java:39):/depart/departList
+[2018-08-31 16:57:31,625] INFO (AuthFilter.java:33):/depart/departView
+[2018-08-31 16:57:31,626] WARN (AuthFilter.java:35):/depart/departView
+[2018-08-31 16:57:31,626]ERROR (AuthFilter.java:37):/depart/departView
+[2018-08-31 16:57:31,627]FATAL (AuthFilter.java:39):/depart/departView
+[2018-08-31 16:57:33,179] INFO (AuthFilter.java:33):/depart/departDelete
+[2018-08-31 16:57:33,179] WARN (AuthFilter.java:35):/depart/departDelete
+[2018-08-31 16:57:33,179]ERROR (AuthFilter.java:37):/depart/departDelete
+[2018-08-31 16:57:33,179]FATAL (AuthFilter.java:39):/depart/departDelete
+[2018-08-31 16:57:34,168] INFO (AuthFilter.java:33):/depart/departList
+[2018-08-31 16:57:34,168] WARN (AuthFilter.java:35):/depart/departList
+[2018-08-31 16:57:34,168]ERROR (AuthFilter.java:37):/depart/departList
+[2018-08-31 16:57:34,168]FATAL (AuthFilter.java:39):/depart/departList

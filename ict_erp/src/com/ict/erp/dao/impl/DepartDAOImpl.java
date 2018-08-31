@@ -78,14 +78,35 @@ public class DepartDAOImpl extends CommonDAOImpl implements DepartDAO {
 
 	@Override
 	public int updateDepartInfo(DepartInfo di) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "update depart_info set diCode=?, diName=?, diDesc=? where diNum=? ";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, di.getDiCode());
+			ps.setString(2, di.getDiName());
+			ps.setString(3, di.getdiDesc());
+			ps.setInt(4, di.getDiNum());
+
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close();
+		}
 	}
 
 	@Override
 	public int deleteDepartInfo(DepartInfo di) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		String sql = "delete from depart_info where diNum=? ";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, di.getDiNum());
+			System.out.println(di.getDiNum());
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close();
+		}
 	}
 
 }

@@ -8,8 +8,8 @@ import com.ict.erp.vo.MusicInfo;
 
 public interface MusicService {
 	public List<MusicInfo> getMusicList(MusicInfo mi) throws SQLException ;
-	public MusicInfo getMusic(int mcNum);
-	public Map<String, Object> insertMusic(MusicInfo mi);
-	public Map<String, Object> updateMusic(MusicInfo mi);
-	public Map<String, Object> deleteMusic(int mcNum);
+	public MusicInfo getMusic(int mcNum) throws SQLException ;
+	public Map<String, Object> insertMusic(MusicInfo mi) throws SQLException ;
+	public Map<String, Object> updateMusic(MusicInfo mi) throws SQLException ;
+	public Map<String, Object> deleteMusic(int mcNum) throws SQLException ;
 } 

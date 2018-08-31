@@ -7,8 +7,8 @@ import com.ict.erp.vo.MusicInfo;
 
 public interface MusicDAO extends CommonDAO {
 	public List<MusicInfo> selectList(MusicInfo mi) throws SQLException ;
-	public MusicInfo selectMusic(int mcNum);
-	public int insertMusic(MusicInfo mi);
-	public int updateMusic(MusicInfo mi);
-	public int deleteMusic(MusicInfo mi);
+	public MusicInfo selectMusic(int mcNum) throws SQLException ;
+	public int insertMusic(MusicInfo mi) throws SQLException ;
+	public int updateMusic(MusicInfo mi) throws SQLException ;
+	public int deleteMusic(int mcNum) throws SQLException ;
 }
