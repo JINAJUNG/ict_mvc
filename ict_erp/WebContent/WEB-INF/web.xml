@@ -75,8 +75,11 @@
 		<filter-name>EncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-<!-- 	  <context-param>
-    <param-name>TicketMovieService</param-name>
-    <param-value>com.ict.erp.service.impl.TicketMovieServiceImpl</param-value>
-  </context-param> -->
+	<listener>
+		<listener-class>com.ict.erp.listener.InitListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>TicketMovieService</param-name>
+		<param-value>com.ict.erp.service.impl.TicketMovieServiceImpl</param-value>
+	</context-param>
 </web-app>

@@ -21,6 +21,7 @@ import org.apache.commons.logging.LogFactory;
 
 import com.ict.erp.common.IBean;
 import com.ict.erp.common.ICTUtils;
+import com.ict.erp.common.ServiceFactory;
 import com.ict.erp.service.TicketMovieService;
 import com.ict.erp.service.impl.TicketMovieServiceImpl;
 import com.ict.erp.vo.TicketMovie;
@@ -37,12 +38,13 @@ public class TicketMovieServlet extends HttpServlet {
 	private static final File TEMP_REPOSITORY = new File(System.getProperty("java.io.tmpdir"));
 	private static final String UP_PATH = "C:\\jsp_study\\workspace\\git\\ict_erp\\ict_erp\\WebContent";
 
-	private TicketMovieService ts = new TicketMovieServiceImpl();
+	private TicketMovieService ts = (TicketMovieService)ServiceFactory.getService("TicketMovieService");
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		uri = request.getRequestURI();
 		String cmd = ICTUtils.getCmd(uri);
+		System.out.println(ts);
 		try {
 			if (cmd.equals("ticketList")) {
 				request.setAttribute("tList", ts.getMovieList(new TicketMovie()));
