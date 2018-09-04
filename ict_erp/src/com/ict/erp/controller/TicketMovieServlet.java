@@ -24,6 +24,7 @@ import com.ict.erp.common.ICTUtils;
 import com.ict.erp.common.ServiceFactory;
 import com.ict.erp.service.TicketMovieService;
 import com.ict.erp.service.impl.TicketMovieServiceImpl;
+import com.ict.erp.vo.MemberInfo;
 import com.ict.erp.vo.TicketMovie;
 
 public class TicketMovieServlet extends HttpServlet {
@@ -48,6 +49,11 @@ public class TicketMovieServlet extends HttpServlet {
 		try {
 			if (cmd.equals("ticketList")) {
 				request.setAttribute("tList", ts.getMovieList(new TicketMovie()));
+			}else if(cmd.equals("ticketView")) {
+				String num = request.getParameter("tmNum");
+				request.setAttribute("tm", ts.getTicketMovie(Integer.parseInt(num)));
+			}else {
+				
 			}
 			}catch (SQLException e) {
 				e.printStackTrace();
@@ -82,10 +88,8 @@ public class TicketMovieServlet extends HttpServlet {
 
 						String fPath = UP_PATH + fName;
 						File sFile = new File(fPath);
-						System.out.println("쑤우" + File.separator + "upload" + File.separator
-								+ System.currentTimeMillis() + fi.getName().substring(fi.getName().lastIndexOf(".")));
-						System.out.println("뇨내" + fPath);
 						fi.write(sFile);
+
 						params.put(fi.getFieldName(), fName);
 					}
 				}
@@ -96,8 +100,18 @@ public class TicketMovieServlet extends HttpServlet {
 
 				log.debug(params);
 				log.debug(tm);
-				doService(request, response);
+				
+			}else if(cmd.equals("updateTicket")) {
+				
+				
+			}else if(cmd.equals("deleteTicket")) {
+				String tmNum = request.getParameter("tmNum");
+				TicketMovie tm = new TicketMovie();
+				tm.setTmNum(Integer.parseInt(tmNum));
+				request.setAttribute("rMap", ts.deleteTicket(tm));
+				uri = "/ticketMovie/ticketView";
 			}
+			doService(request, response);
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}

@@ -12,4 +12,5 @@ public interface DepartService extends CommonService{
 	public Map<String,Object> insertDepartInfo(DepartInfo di) throws SQLException;
 	public Map<String,Object> updateDepartInfo(DepartInfo di) throws SQLException;
 	public Map<String,Object> deleteDepartInfo(DepartInfo di) throws SQLException;
+	public List<DepartInfo> getDepartInfoListNonPage(DepartInfo di) throws SQLException;
 }

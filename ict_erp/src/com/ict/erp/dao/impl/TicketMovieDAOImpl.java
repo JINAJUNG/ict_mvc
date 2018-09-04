@@ -1,11 +1,13 @@
-package com.ict.erp.dao;
+package com.ict.erp.dao.impl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import com.ict.erp.common.IBean;
-import com.ict.erp.dao.impl.CommonDAOImpl;
+import com.ict.erp.dao.TicketMovieDAO;
+import com.ict.erp.vo.MusicInfo;
 import com.ict.erp.vo.TicketMovie;
 
 public class TicketMovieDAOImpl extends CommonDAOImpl implements TicketMovieDAO {
@@ -52,6 +54,47 @@ public class TicketMovieDAOImpl extends CommonDAOImpl implements TicketMovieDAO 
 			close();
 		}
 
+	}
+
+	@Override
+	public TicketMovie selectTicketMovie(int num) throws SQLException {
+		String sql = "select * from ticket_movie where tmNum=?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1,num);
+			rs = ps.executeQuery();
+			TicketMovie ti = null;
+			if (rs.next()) {
+				ti = new TicketMovie(rs.getInt("tmNum"),rs.getString("tmName"),rs.getInt("tmPrice"),rs.getString("tmStartDat"),rs.getString("tmEndDat"),rs.getString("tmCreDat"),rs.getString("tmDesc"),rs.getInt("tmCnt"),rs.getString("tmImg"));				
+			}
+			return ti;
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close();
+		}
+
+	}
+
+	@Override
+	public int deleteTicket(TicketMovie t) throws SQLException {
+		String sql = "delete from ticket_movie where tmNum=?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setInt(1,t.getTmNum());
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			close();
+		}
+
+	}
+
+	@Override
+	public int updateTicket(TicketMovie t) throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
