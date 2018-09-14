@@ -5,61 +5,65 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border='1'>
-		<thead>
-			<tr>
-				<th>영화 번호</th>
-				<th>영화 이름</th>
-				<th>영화 이름</th>
-				<th>영화 설명</th>
-				<th>버튼</th>
-			</tr>
-		</thead>
-		<tbody id="tBody">
-
-		</tbody>
-	</table>
-	<button type="button" id="btn">제이슨 테스트</button>
-	<script type="text/javascript">
-		document.querySelector('#btn').onclick = function() {
+<table border="1">
+	<thead>
+		<tr>
+			<th>번호</th>
+			<th>부서명</th>
+			<th>부서코드</th>
+			<th>부서설명</th>
+		</tr>
+	</thead>
+	<tbody id="tBody">
+	</tbody>
+</table>
+<button>PUT</button>
+<button>GET</button>
+<button>POST</button>
+<button>DELETE</button>
+<script>
+	var objs = document.querySelectorAll('button');
+	for(var i=0;i<objs.length;i++){
+		objs[i].onclick = function(){
 			var req = new XMLHttpRequest();
-
-			req.onreadystatechange = function() {
-				if (req.readyState == req.DONE) {
-					if (req.status == 200) {
+			req.onreadystatechange = function(){
+				if(req.readyState==req.DONE){
+					if(req.status==200){
 						var obj = JSON.parse(req.responseText);
-						console.log(obj);
-						var html = '';
-						for (var i = 0; i < obj.length; i++) {
+						var html='';
+						for(var i=0;i<obj.length;i++){
 							html += '<tr>';
-							html += '<td>' + obj[i].tmNum + '</td>';
-							html += '<td>' + obj[i].tmName + '</td>';
-							html += '<td>' + obj[i].tmPrice + '</td>';
-							html += '<td>' + obj[i].tmDesc + '</td>';
-							html += '<td><button>jina</button></td>';
+							html += '<td>' + obj[i].diNum + '</td>';
+							html += '<td>' + obj[i].diName + '</td>';
+							html += '<td>' + obj[i].diCode + '</td>';
+							html += '<td>' + obj[i].diDesc + '</td>';
 							html += '</tr>';
 						}
 						document.querySelector('#tBody').innerHTML = html;
-						//console.log(req.responseText);
-					} else {
-
+					}else{
+						
 					}
-					//alert(req.status);
 				}
-				//alert(req.readyState);
 			}
-			var param = {
-				name : '홍길동',
-				age : '23',
-				address : 'seoul'
-			};
-			//console.log(param);
-			param = encodeURIComponent(JSON.stringify(param));
-			//console.log(param);
-			req.open('post', 'json/list');
-			/* req.open('get', 'json/list?param=' + param); */
-			req.send();
+			var param = {name:'홍길동',age:'33',address:'seoul'};
+			param = JSON.stringify(param);
+			var method = this.innerHTML;
+			if(method=='GET'){
+				param = encodeURIComponent(param);
+				param = '?param='+param;
+				req.open(method,'/json/list'+param);
+			}else {
+				req.open(method,'/json/list');
+			}
+			if(method=='GET'){
+				req.send();
+			}else{
+				req.send(param);
+			}
+			
+			//req.send(JSON.stringify(param));
 		}
-	</script>
+	}
+</script>
 </body>
 </html>

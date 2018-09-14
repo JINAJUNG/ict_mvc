@@ -45,7 +45,7 @@ public class TicketMovieServlet extends HttpServlet {
 			throws ServletException, IOException {
 		uri = request.getRequestURI();
 		String cmd = ICTUtils.getCmd(uri);
-		System.out.println(ts);
+		System.out.println(TEMP_REPOSITORY);
 		try {
 			if (cmd.equals("ticketList")) {
 				request.setAttribute("tList", ts.getMovieList(new TicketMovie()));
@@ -88,7 +88,7 @@ public class TicketMovieServlet extends HttpServlet {
 
 						String fPath = UP_PATH + fName;
 						File sFile = new File(fPath);
-						fi.write(sFile);
+						fi.write(sFile);//저장~
 
 						params.put(fi.getFieldName(), fName);
 					}
