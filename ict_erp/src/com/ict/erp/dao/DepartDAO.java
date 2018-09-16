@@ -12,4 +12,5 @@ public interface DepartDAO extends CommonDAO{
 	public int insertDepartInfo(DepartInfo di) throws SQLException;
 	public int updateDepartInfo(DepartInfo di) throws SQLException;
 	public int deleteDepartInfo(DepartInfo di) throws SQLException;
+	public List<DepartInfo> selectDepartInfoListNonPage(DepartInfo di) throws SQLException;
 }

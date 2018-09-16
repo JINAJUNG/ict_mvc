@@ -11,7 +11,7 @@
     <appender name="file" 
     	class="org.apache.log4j.DailyRollingFileAppender">
         <param name="File" 
-        	value="C:\\jsp_study\\workspase\\git\\ict_mvc\\ict_erp\\WebContent\\WEB-INF\\debug.log" />
+        	value="C:\jsp_study\workspace\\git\\ict_mvc\\ict_erp\\WebContent\\WEB-INF\\debug.log" />
         <param name="datePattern" value="'.'yyyy-MM-dd" />
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern"

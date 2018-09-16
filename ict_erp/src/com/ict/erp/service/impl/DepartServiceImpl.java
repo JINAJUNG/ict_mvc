@@ -28,6 +28,17 @@ public class DepartServiceImpl implements DepartService {
 			DBCon.close();
 		}
 	}
+	@Override
+	public List<DepartInfo> getDepartInfoListNonPage(DepartInfo di) throws SQLException {
+		ddao.setConnection(DBCon.getCon());
+		try {
+			return ddao.selectDepartInfoListNonPage(di);
+		} catch (SQLException e) {
+			throw e;
+		} finally {
+			DBCon.close();
+		}
+	}
 
 	@Override
 	public DepartInfo getDepartInfo(int diNum) throws SQLException {

@@ -24,6 +24,7 @@ import com.ict.erp.common.ICTUtils;
 import com.ict.erp.common.ServiceFactory;
 import com.ict.erp.service.TicketMovieService;
 import com.ict.erp.service.impl.TicketMovieServiceImpl;
+import com.ict.erp.vo.MemberInfo;
 import com.ict.erp.vo.TicketMovie;
 
 public class TicketMovieServlet extends HttpServlet {
@@ -38,20 +39,25 @@ public class TicketMovieServlet extends HttpServlet {
 	private static final File TEMP_REPOSITORY = new File(System.getProperty("java.io.tmpdir"));
 	private static final String UP_PATH = "C:\\jsp_study\\workspace\\git\\ict_erp\\ict_erp\\WebContent";
 
-	private TicketMovieService ts = (TicketMovieService)ServiceFactory.getService("TicketMovieService");
+	private TicketMovieService ts = (TicketMovieService) ServiceFactory.getService("TicketMovieService");
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		uri = request.getRequestURI();
 		String cmd = ICTUtils.getCmd(uri);
-		System.out.println(ts);
+		System.out.println(TEMP_REPOSITORY);
 		try {
 			if (cmd.equals("ticketList")) {
 				request.setAttribute("tList", ts.getMovieList(new TicketMovie()));
+			} else if (cmd.equals("ticketView")) {
+				String num = request.getParameter("tmNum");
+				request.setAttribute("tm", ts.getTicketMovie(Integer.parseInt(num)));
+			} else {
+
 			}
-			}catch (SQLException e) {
-				e.printStackTrace();
-			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		doService(request, response);
 	}
 
@@ -82,7 +88,9 @@ public class TicketMovieServlet extends HttpServlet {
 
 						String fPath = UP_PATH + fName;
 						File sFile = new File(fPath);
+
 						fi.write(sFile);
+						fi.write(sFile);// 저장~
 						params.put(fi.getFieldName(), fName);
 					}
 				}
@@ -93,8 +101,17 @@ public class TicketMovieServlet extends HttpServlet {
 
 				log.debug(params);
 				log.debug(tm);
-				doService(request, response);
+
+			} else if (cmd.equals("updateTicket")) {
+
+			} else if (cmd.equals("deleteTicket")) {
+				String tmNum = request.getParameter("tmNum");
+				TicketMovie tm = new TicketMovie();
+				tm.setTmNum(Integer.parseInt(tmNum));
+				request.setAttribute("rMap", ts.deleteTicket(tm));
+				uri = "/ticketMovie/ticketView";
 			}
+			doService(request, response);
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}

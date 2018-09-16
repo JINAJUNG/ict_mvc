@@ -7,12 +7,21 @@ width: 150px;
 height: auto;
 }
 </style>
+<c:if test="${!empty rMap}">
+	<script>
+alert('${rMap.msg}');
+if(${rMap.cnt}==1){
+	location.href='/ticketMovie/ticketList';
+}
+</script>
+</c:if>
 <body>
 	<div id="wrapper">
 		<jsp:include page="/WEB-INF/views/menu/left.jsp" />
 		<div id="page-content-wrapper">
-			<table class="table table-bordered">
-				<tr>
+			<form action="/ticketMovie/deleteTicket" method="post">
+				<table class="table table-bordered table-hover">
+					<tr>
 					<th>번호</th>
 					<th>영화 제목</th>
 					<th>영화 가격</th>
@@ -22,9 +31,10 @@ height: auto;
 					<th>영화 설명</th>
 					<th>관객 수</th>
 					<th>포스터</th>
-				</tr>
-				<c:forEach var="t" items="${tList}">
-					<tr onclick="window.location='/ticketMovie/ticketView?tmNum=${t.tmNum}'">
+					</tr>
+
+					<c:set var="t" value="${tm}"></c:set>
+					<tr>
 						<td>${t.tmNum}</td>
 						<td>${t.tmName}</td>
 						<td>${t.tmPrice}</td>
@@ -35,16 +45,13 @@ height: auto;
 						<td>${t.tmCnt}</td>
 						<td><img src="${t.tmImg}"></td>
 					</tr>
-				</c:forEach>
-				<c:if test="${empty tList}">
 					<tr>
-						<td colspan="9">등록된 영화가 없는걸~?</td>
+						<td colspan="6"><button data-page="/ticketMovie/ticketUpdate?tiNum=${t.tmNum}">수정</button></td>
+						<td colspan="5"><button>삭제</button></td>
 					</tr>
-				</c:if>
-				<tr>
-					<td colspan="9"><button class="btn btn-primary" data-page="/ticketMovie/ticketMovieInsert">영화 등록</button> </td>
-				</tr>
-			</table>
+				</table>
+				<input type="hidden" name="tmNum" value="${t.tmNum}">
+			</form>
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/views/menu/bottom.jsp" />
