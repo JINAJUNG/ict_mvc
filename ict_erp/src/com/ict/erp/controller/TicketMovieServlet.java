@@ -82,9 +82,6 @@ public class TicketMovieServlet extends HttpServlet {
 
 						String fPath = UP_PATH + fName;
 						File sFile = new File(fPath);
-						System.out.println("쑤우" + File.separator + "upload" + File.separator
-								+ System.currentTimeMillis() + fi.getName().substring(fi.getName().lastIndexOf(".")));
-						System.out.println("뇨내" + fPath);
 						fi.write(sFile);
 						params.put(fi.getFieldName(), fName);
 					}
